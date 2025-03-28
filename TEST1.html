@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Page Image</title>
+    <style>
+        /* Set margin and padding to zero for full page coverage */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        /* Main container */
+        .main-container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Image container */
+        .image-container {
+            width: 100%;
+            height: 100vh;  /* Makes sure the image container takes up the full height of the viewport */
+            overflow: auto;  /* Makes the image scrollable if it exceeds the viewport height */
+            position: relative;
+        }
+
+        /* Make the image cover the full viewport */
+        .background-image {
+            width: 100%;
+            height: auto;  /* Let the height adjust to the aspect ratio */
+            min-height: 100%;  /* Ensure the image covers the viewport vertically */
+            object-fit: cover;
+        }
+
+        /* Text container beneath the image */
+        .text-container {
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for the text */
+            color: white;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <!-- Image Container -->
+        <div class="image-container">
+            <img src="darkMotherDarkerNOGRAD.jpg" alt="Dark Mother" class="background-image">
+        </div>
+
+        <!-- Text Container -->
+        <div class="text-container">
+            <p>Your text goes here</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.image-container {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Allows text to be positioned inside */
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    position: absolute; /* Positions images relative to the container */
+}
+
+.background {
+    z-index: 1; /* Place behind subject */
+}
+
+.subject {
+    z-index: 3; /* Place in front of background */
+}
+
+.title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+    font-style: italic;
+    color: white;
+    line-height: 1.1;
+    z-index: 2;
+}
+
+.title span {
+    display: block;
+    margin: 0;
+}
