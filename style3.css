@@ -1,8 +1,8 @@
 body, html {
     margin: 0;
     padding: 0;
-    height: 100%;
-    position: relative;
+    min-height: 100vh;
+    /* position: relative; */
     background-color: #000000; /* Set background color */
 }
 
@@ -20,6 +20,36 @@ body, html {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* Siblings Eating Background */
+.siblings-eating-background {
+    position: absolute;
+    left: 0px;
+    top: 0px; 
+    width: 1200px;
+    z-index: 1;
+}
+
+.siblings-eating-background img {
+    width: 100%; /* Match the width */
+    height: auto; /* Keep aspect ratio */
+    object-fit: unset; /* Let it size naturally */
+}
+
+/* Siblings Eating Subject */
+.siblings-eating-subject {
+    position: absolute;
+    left: 0px;
+    top: 0px; /* Position at the same level as background */
+    width: 1200px;
+    z-index: 3;
+}
+
+.siblings-eating-subject img {
+    width: 100%; /* Match the width */
+    height: auto; /* Keep aspect ratio */
+    object-fit: unset; /* Let it size naturally */
 }
 
 /* Background image (z-index: 1) */
@@ -109,6 +139,7 @@ body, html {
 
 .info-box {
     position: absolute;
+    z-index: 2;
     left: 20px;
     top: calc(90px + 20px); /* Adjust based on actual title height */
     width: calc(100vw - 800px - 20px); /* Stop 20px before the image */
