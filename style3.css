@@ -2,7 +2,6 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden; /* Prevent scrolling */
     position: relative;
     background-color: #000000; /* Set background color */
 }
@@ -86,7 +85,7 @@ body, html {
     /* font-family: "Play", sans-serif; */
     /* font-family: "Electrolize", sans-serif; */
     /* font-style: italic; */
-    white-space: pre; /* Prevent text from wrapping */
+    white-space: pre;
     color: white; /* Adjust color as needed */
     /* text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7); */
     z-index: 2;
@@ -94,4 +93,33 @@ body, html {
 
     animation: fadeInFromBelow 1s ease-out, glitchEffect 0.10s 1s; /* Apply the fade-in and slide-up animation */
 }
+
+/* Subtitle styling */
+.subtitle {
+    font-size: 14px; /* Make it small */
+    font-family: "Electrolize", sans-serif;
+    color: white;
+    opacity: 0.7; /* Slight transparency for a subtle look */
+    position: absolute;
+    top: 90px; /* Position it slightly below the main text */
+    right: 10px;
+    /* right: 0.5vw; */
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+.info-box {
+    position: absolute;
+    left: 20px;
+    top: calc(90px + 20px); /* Adjust based on actual title height */
+    width: calc(100vw - 800px - 20px); /* Stop 20px before the image */
+    height: 120vh; /* Extend beyond the screen */
+    background-color: rgba(50, 50, 50, 0.5); /* Dark gray with transparency */
+    border-radius: 20px; /* Rounded edges */
+    padding: 20px;
+}
+
+
+
+
+
 
