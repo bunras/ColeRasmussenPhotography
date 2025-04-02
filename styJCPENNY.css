@@ -1,0 +1,192 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    /* position: relative; */
+    background-color: #000000; /* Set background color */
+}
+
+.gallery {
+    position: absolute;
+    top: 0;
+    height: auto;
+    width: 43vw;
+    right: 0;
+    overflow-x: hidden;
+}
+
+.gallery img {
+    display: block;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+}
+
+p {
+    position: fixed;
+    z-index: 4;
+    color: white;
+    background-color: rgba(50, 50, 50, 0.5);
+    width: calc(57vw - 37px);
+    left: 20px;
+    height: 86vh;
+    top: 80px;
+    font-family: "Electrolize", sans-serif;
+    font-size: 30px;
+    border-radius: 20px;
+
+    /* Add box-sizing to include padding in total width/height */
+    box-sizing: border-box;
+    padding: 20px;  
+
+    object-fit: cover;
+    overflow-x: hidden;
+}
+
+/* Background image (z-index: 1) */
+.background {
+    z-index: 1;
+}
+
+/* Subject image (z-index: 3) */
+.subject {
+    z-index: 3;
+}
+
+.cole {
+    margin-left: 20px;
+    margin-right: 30px;
+    margin-bottom: 20px; 
+    margin-top: 20px;
+    
+    /* Control the size of the image */
+    max-width: 200px;
+    max-height: 200px; 
+    
+    /* Scale the image properly */
+    object-fit: cover; 
+    border-radius: 50%; 
+}
+
+/* Fade */
+@keyframes fadeInFromBelow {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start 20px below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at the normal position */
+    }
+}
+
+/* Glitch */
+@keyframes glitchEffect {
+    0% {
+        transform: translate(0, 0); /* Start at normal position */
+        opacity: 1;
+    }
+    10% {
+        transform: translate(-20px, 20px); /* Offset to the bottom-left */
+        opacity: 0.8;
+    }
+    30% {
+        transform: translate(-10px, 10px); /* Slightly offset */
+        opacity: 0.7;
+    }
+    40% {
+        transform: translate(10px, -10px); /* Slightly offset */
+        opacity: 1;
+    }
+    50% {
+        transform: translate(0, 0); /* Back to the normal position */
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0, 0); /* Ensure it ends at the normal position */
+        opacity: 1;
+    }
+}
+
+/* Large text overlay (z-index: 2) */
+.text-overlay {
+    position: fixed;
+    top: 0; /* Align text to the top */
+    left: auto;
+    right: 20px;
+    width: auto; /* Extends beyond the right side */
+    font-size: 65px; /* Fixed font size */
+    /* font-family: "Michroma", sans-serif; */
+    font-family: "Orbit", sans-serif;
+    /* font-family: "Play", sans-serif; */
+    /* font-family: "Electrolize", sans-serif; */
+    /* font-style: italic; */
+    white-space: pre;
+    color: white; /* Adjust color as needed */
+    /* text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7); */
+    z-index: 2;
+    padding-top: 10px; /* Small spacing from the top */
+
+    animation: fadeInFromBelow 1s ease-out, glitchEffect 0.10s 1s; /* Apply the fade-in and slide-up animation */
+}
+
+/* Subtitle styling */
+.subtitle {
+    z-index: 4;
+    font-size: 14px; /* Make it small */
+    font-family: "Electrolize", sans-serif;
+    color: white;
+    opacity: 0.7; /* Slight transparency for a subtle look */
+    position: fixed;
+    top: 90px; /* Position it slightly below the main text */
+    right: 30px;
+    /* right: 0.5vw; */
+    white-space: nowrap; /* Prevent wrapping */
+
+    animation: fadeInFromBelow 1s ease-out, glitchEffect 0.10s 1s; /* Apply the fade-in and slide-up animation */
+}
+
+/* .info-box {
+    position: absolute;
+    z-index: 2;
+    left: 20px;
+    top: calc(90px + 20px); 
+    width: calc(100vw - 800px - 20px);
+    height: 80vh; 
+    background-color: rgba(50, 50, 50, 0.5);
+    border-radius: 20px;
+    padding: 20px;
+} */
+
+.info-box {
+    position: absolute;
+    z-index: 2;
+    left: 20px;
+    top: 110px;
+    width: 58vw;
+    height: 80vh; /* Extend beyond the screen */
+    background-color: rgba(50, 50, 50, 0.5); /* Dark gray with transparency */
+    border-radius: 20px; /* Rounded edges */
+    padding: 20px;
+}
+
+/* Custom scrollbar styles */
+
+/* WebKit browsers (Chrome, Safari, Edge) */
+/* Hide scrollbar for WebKit browsers */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for Firefox */
+* {
+    scrollbar-width: none;
+}
+
+
+
+
+
+
+
+
