@@ -17,7 +17,7 @@ body, html {
 .container img {
     display: block;
     height: auto;
-    width: 40vw;
+    width: 43vw;
     object-fit: cover;
     float: right;
 }
@@ -27,7 +27,7 @@ body, html {
     z-index: 4;
     color: white;
     background-color: rgba(50, 50, 50, 0.5);
-    width: calc(60vw - 37px);
+    width: calc(57vw - 37px);
     left: 20px;
     height: 86vh;
     top: 80px;
