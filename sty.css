@@ -10,11 +10,27 @@ body, html {
     position: absolute;
     top: 0;
     height: 100vh;
-    width: 100vw; /* Maintain aspect ratio */
+    width: 100vw;
     overflow-x: hidden;
 }
 
 .container img {
+    display: block;
+    height: auto;
+    width: 43vw;
+    object-fit: cover;
+    float: right;
+}
+
+.container2 {
+    position: absolute;
+    top: 100vh;
+    height: 200vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.container2 img {
     display: block;
     height: auto;
     width: 43vw;
