@@ -39,7 +39,7 @@ body, html {
 }
 
 .container p {
-    position: relative;
+    position: fixed;
     z-index: 4;
     color: white;
     background-color: rgba(50, 50, 50, 0.5);
@@ -126,7 +126,7 @@ body, html {
 
 /* Large text overlay (z-index: 2) */
 .text-overlay {
-    position: absolute;
+    position: fixed;
     top: 0; /* Align text to the top */
     left: auto;
     right: 20px;
@@ -153,7 +153,7 @@ body, html {
     font-family: "Electrolize", sans-serif;
     color: white;
     opacity: 0.7; /* Slight transparency for a subtle look */
-    position: absolute;
+    position: fixed;
     top: 90px; /* Position it slightly below the main text */
     right: 30px;
     /* right: 0.5vw; */
@@ -198,7 +198,6 @@ body, html {
 * {
     scrollbar-width: none;
 }
-
 
 
 
