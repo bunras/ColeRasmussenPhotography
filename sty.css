@@ -126,6 +126,8 @@ p {
     padding-top: 10px; 
 
     animation: fadeInFromBelow 1s ease-out, glitchEffect 0.10s 1s; 
+
+    /* FOR SAILORS PICTURE USE font-family: "Bodoni Moda", serif; font-style: italic; */
 }
 
 /* Subtitle styling */
@@ -172,7 +174,6 @@ p {
 * {
     scrollbar-width: none;
 }
-
 
 
 
