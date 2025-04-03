@@ -109,10 +109,10 @@ p {
 /* Large text overlay (z-index: 2) */
 .text-overlay {
     position: fixed;
-    top: 0; /* Align text to the top */
+    top: 0;
     left: auto;
     right: 20px;
-    width: auto; /* Extends beyond the right side */
+    width: auto; 
     font-size: 65px; /* Fixed font size */
     /* font-family: "Michroma", sans-serif; */
     font-family: "Orbit", sans-serif;
@@ -120,52 +120,44 @@ p {
     /* font-family: "Electrolize", sans-serif; */
     /* font-style: italic; */
     white-space: pre;
-    color: white; /* Adjust color as needed */
+    color: white; 
     /* text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7); */
     z-index: 2;
-    padding-top: 10px; /* Small spacing from the top */
+    padding-top: 10px; 
 
-    animation: fadeInFromBelow 1s ease-out, glitchEffect 0.10s 1s; /* Apply the fade-in and slide-up animation */
+    animation: fadeInFromBelow 1s ease-out, glitchEffect 0.10s 1s; 
 }
 
 /* Subtitle styling */
 .subtitle {
     z-index: 4;
-    font-size: 14px; /* Make it small */
+    font-size: 14px;
     font-family: "Electrolize", sans-serif;
     color: white;
-    opacity: 0.7; /* Slight transparency for a subtle look */
+    opacity: 0.7;
     position: fixed;
-    top: 90px; /* Position it slightly below the main text */
+    top: 90px;
     right: 30px;
     /* right: 0.5vw; */
-    white-space: nowrap; /* Prevent wrapping */
+    white-space: nowrap;
 
-    animation: fadeInFromBelow 1s ease-out, glitchEffect 0.10s 1s; /* Apply the fade-in and slide-up animation */
+    animation: fadeInFromBelow 1s ease-out, glitchEffect 0.10s 1s; 
 }
 
-/* .info-box {
-    position: absolute;
-    z-index: 2;
-    left: 20px;
-    top: calc(90px + 20px); 
-    width: calc(100vw - 800px - 20px);
-    height: 80vh; 
-    background-color: rgba(50, 50, 50, 0.5);
-    border-radius: 20px;
-    padding: 20px;
-} */
+.top-left-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding-top: 10px; 
+}
 
-.info-box {
-    position: absolute;
-    z-index: 2;
-    left: 20px;
-    top: 110px;
-    width: 58vw;
-    height: 80vh; /* Extend beyond the screen */
-    background-color: rgba(50, 50, 50, 0.5); /* Dark gray with transparency */
-    border-radius: 20px; /* Rounded edges */
-    padding: 20px;
+.top-left-button:hover {
+    text-decoration: underline;
 }
 
 /* Custom scrollbar styles */
