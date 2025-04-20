@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLE RASMUSSEN PHOTOGRAPHY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bruno+Ace&family=Bruno+Ace+SC&family=Cinzel:wght@400..900&family=Dynalight&family=Electrolize&family=Luxurious+Roman&family=Michroma&family=Orbit&family=Orbitron:wght@400..900&family=Play:wght@400;700&family=Rouge+Script&family=Shrikhand&family=Syncopate:wght@400;700&family=Whisper&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sty.css">
+</head>
+<body class="default">
+    <div class="gallery background">
+        <img src="sailorPerfectGIT.jpg" alt="Background Image">
+        <img src="sailorAngelBackground.png" alt="Background Image">
+        <img src="SailorJungleColorOpt.jpg" alt="Background Image">
+        <img src="Saily.jpg" alt="Background Image">
+        <img src="SailorJGNoShadowsRedPop.jpg" alt="Background Image">
+        <img src="backgroundMotherTEST.png" alt="Background Image">
+        <img src="siblingsEating.jpg" alt="Background Image">
+        <img src="BluesBrothers.jpg" alt="Background Image">
+        <img src="siblingsSlayingR.jpg" alt="Background Image">
+    </div>
+
+    <p> 
+        <img src="meHead.jpg" alt="Description of the image" class="cole">
+        Lorem ipsum dolor sit amet, id veniam mucius noluisse sea. Et malorum nusquam eligendi eum, cum cu feugiat repudiandae. Bonorum voluptatibus et eum, vix voluptatum intellegebat eu. Nec te eripuit graecis lucilius, menandri erroribus an qui.
+
+        Dictas quaestio eu pri, vim ut mollis commodo, qui ad saepe labore timeam. Mel primis utamur ex, usu regione minimum pericula no. Cu has movet veritus apeirian, elit verear philosophia quo ut. Pri maiorum corpora placerat et. Te sea gubergren assueverit, no per iusto delenit reprimique, partem legendos te eum. In nam abhorreant temporibus liberavisse.
+        
+        An usu quem fierent molestie. Enim qualisque ad mel. Pro duis feugait at, cum an affert quando tractatos. Cum ludus detracto interpretaris ex. Usu ex civibus propriae.
+        
+        Utroque appetere ex vix. Has tota nostrum pericula eu. An aeterno oblique dolorum per. Utinam tacimates elaboraret vis an, usu assum minimum expetenda cu.
+        
+        Est graeco delectus at. In nulla tantas verear mel, nec ea volumus consectetuer, mel te tation deleniti. Et sed quodsi deterruisset, vim in decore argumentum, an ridens voluptua eum. Veritus molestie invidunt mel id, ea munere philosophia est. Mea aeque latine ea. 
+        
+    </p>
+
+    <div class="gallery subject">
+        <img src="SailorPerfectSubject.png" alt="Subject Image">
+        <img src="sailorAngelSubject.png" alt="Subject Image">
+        <img src="SailorRedSubject.png" alt="Subject Image">
+        <img src="SailySubject.png" alt="Subject Image">
+        <img src="SailorPopSubject.png" alt="Subject Image">
+        <img id="subjectMotherTEST" src="subjectMotherTEST.png" alt="Subject Image">
+        <img src="siblingsEatingSubject.png" alt="Subject Image">
+        <img src="bluesBrothersSubject.png" alt="Subject Image">
+        <img src="siblingsSittingSubject.png" alt="Subject Image">
+    </div>
+
+    <!-- <button class="top-left-button">Click Me</button> -->
+    <div class="text-overlay">COLE RASMUSSEN PHOTOGRAPHY</div>
+    <div class="subtitle">COLE RASMUSSEN PHOTOGRAPHY</div> 
+    
+    <script type="text/javascript">
+        const body = document.body;
+
+        const intersectionObserver = new IntersectionObserver(
+            (e) => {
+                if (e[0].intersectionRatio > 0 && document.body.className === "default")
+                    document.body.classList = "alt";
+            }
+        ).observe(document.getElementById("subjectMotherTEST"));
+
+        intersectionObserver.observe(subjectMotherTEST);
+    </script>
+</body>
+</html>
