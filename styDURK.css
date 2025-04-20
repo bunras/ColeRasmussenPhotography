@@ -1,0 +1,192 @@
+.alt {
+    --background-color: lightblue;
+    /* change this for theme */
+}
+
+.default {
+    --background-color: #000000;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    /* position: relative; */
+    background-color: var(--background-color)
+    /* this variable changes the background color */
+}
+
+.gallery {
+    position: absolute;
+    top: 0;
+    height: auto;
+    width: 43vw;
+    right: 0;
+    overflow-x: hidden;
+}
+
+.gallery img {
+    display: block;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+}
+
+p {
+    position: fixed;
+    z-index: 4;
+    color: white;
+    background-color: rgba(50, 50, 50, 0.5);
+    width: calc(57vw - 37px);
+    left: 20px;
+    height: 86vh;
+    top: 80px;
+    font-family: "Electrolize", sans-serif;
+    font-size: 30px;
+    border-radius: 20px;
+
+    /* Add box-sizing to include padding in total width/height */
+    box-sizing: border-box;
+    padding: 20px;  
+
+    object-fit: cover;
+    overflow-x: hidden;
+}
+
+/* Background image (z-index: 1) */
+.background {
+    z-index: 1;
+}
+
+/* Subject image (z-index: 3) */
+.subject {
+    z-index: 3;
+}
+
+.cole {
+    float: right; 
+    margin-left: 20px;
+    margin-right: 30px;
+    margin-bottom: 20px; 
+    margin-top: 20px;
+    max-width: 200px;
+    max-height: 200px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+}
+
+/* Fade */
+@keyframes fadeInFromBelow {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Glitch */
+@keyframes glitchEffect {
+    0% {
+        transform: translate(0, 0); /* Start at normal position */
+        opacity: 1;
+    }
+    10% {
+        transform: translate(-20px, 20px); /* Offset to the bottom-left */
+        opacity: 0.8;
+    }
+    30% {
+        transform: translate(-10px, 10px); /* Slightly offset */
+        opacity: 0.7;
+    }
+    40% {
+        transform: translate(10px, -10px); /* Slightly offset */
+        opacity: 1;
+    }
+    50% {
+        transform: translate(0, 0); /* Back to the normal position */
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0, 0); /* Ensure it ends at the normal position */
+        opacity: 1;
+    }
+}
+
+/* Large text overlay (z-index: 2) */
+.text-overlay {
+    position: fixed;
+    top: 0;
+    left: auto;
+    right: 20px;
+    width: auto; 
+    font-size: 65px; /* Fixed font size */
+    /* font-family: "Michroma", sans-serif; */
+    font-family: "Orbit", sans-serif;
+    /* font-family: "Play", sans-serif; */
+    /* font-family: "Electrolize", sans-serif; */
+    /* font-style: italic; */
+    white-space: pre;
+    color: white; 
+    /* text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7); */
+    z-index: 2;
+    padding-top: 10px; 
+
+    animation: fadeInFromBelow 1s ease-out, glitchEffect 0.10s 1s; 
+
+    /* FOR SAILORS PICTURE USE font-family: "Bodoni Moda", serif; font-style: italic; */
+}
+
+/* Subtitle styling */
+.subtitle {
+    z-index: 4;
+    font-size: 14px;
+    font-family: "Electrolize", sans-serif;
+    color: white;
+    opacity: 0.7;
+    position: fixed;
+    top: 90px;
+    right: 30px;
+    /* right: 0.5vw; */
+    white-space: nowrap;
+
+    animation: fadeInFromBelow 1s ease-out, glitchEffect 0.10s 1s; 
+}
+
+.top-left-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding-top: 10px; 
+}
+
+.top-left-button:hover {
+    text-decoration: underline;
+}
+
+/* Custom scrollbar styles */
+
+/* WebKit browsers (Chrome, Safari, Edge) */
+/* Hide scrollbar for WebKit browsers */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for Firefox */
+* {
+    scrollbar-width: none;
+}
+
+
+
+
+
+
+
