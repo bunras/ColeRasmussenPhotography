@@ -86,28 +86,18 @@
     </script>
 
     <script>
-        function isMobile() {
-            return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-        }
-
-        if (isMobile()) {
-            // Hide everything by default
-            document.body.innerHTML = '';
-
-            // Create a minimal mobile version
-            const galleryBackground = document.querySelector('.gallery.background');
-            const gallerySubject = document.querySelector('.gallery.subject');
-            const textOverlay = document.querySelector('.text-overlay');
-            const subtitle = document.querySelector('.subtitle');
-
-            // Create a new body content
-            const mobileBody = document.createElement('div');
-
-            [galleryBackground, gallerySubject, textOverlay, subtitle].forEach(el => {
-                if (el) mobileBody.appendChild(el.cloneNode(true));
+        if (window.innerWidth <= 768) {
+            // Hide everything else except allowed elements
+            document.querySelectorAll('body > *').forEach(el => {
+                const keep =
+                    (el.classList.contains('gallery') && (el.classList.contains('background') || el.classList.contains('subject'))) ||
+                    el.classList.contains('text-overlay') ||
+                    el.classList.contains('subtitle');
+    
+                if (!keep) {
+                    el.style.display = 'none';
+                }
             });
-
-            document.body.appendChild(mobileBody);
         }
     </script>
 </body>
