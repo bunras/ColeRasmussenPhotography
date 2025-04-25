@@ -102,16 +102,32 @@
             // Inject mobile-specific styles
             const style = document.createElement('style');
             style.innerHTML = `
-                .text-overlay, .subtitle {
+                .text-overlay {
                     font-size: 6vw;
                     text-align: center;
                     margin: 10px 0;
                 }
 
-                .gallery img {
-                    width: 100vw;
+                .subtitle
+                {
+                    fontsize: 3vw;
+                    text-align: left;
+                }
+
+                .gallery {
+                    position: absolute;
+                    top: 0;
                     height: auto;
+                    width: 100vw;
+                    right: 0;
+                    overflow-x: hidden;
+                }
+
+                .gallery img {
                     display: block;
+                    height: auto;
+                    width: 100%;
+                    object-fit: cover;
                 }
 
                 body {
