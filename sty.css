@@ -1,10 +1,19 @@
+.alt {
+    --background-color: lightblue;
+    /* change this for theme */
+}
+
+.default {
+    --background-color: #000000;
+}
 
 body, html {
     margin: 0;
     padding: 0;
     min-height: 100vh;
     /* position: relative; */
-    background-color: #000000; /* Set background color */
+    background-color: var(--background-color)
+    /* this variable changes the background color */
 }
 
 .gallery {
@@ -23,17 +32,34 @@ body, html {
     object-fit: cover;
 }
 
+.galleryLandscape {
+    position: fixed;
+    top: calc(85px + 33vh);
+    height: auto;
+    width: 100vw;
+    left: 0;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.galleryLandscape img {
+    display: inline-block;
+    height: 57.5vh;
+    width: auto;
+    object-fit: cover;
+}
+
 p {
     position: fixed;
-    z-index: 4;
+    z-index: 5;
     color: white;
     background-color: rgba(50, 50, 50, 0.5);
     width: calc(57vw - 37px);
     left: 20px;
-    height: 86vh;
+    height: 30vh;
     top: 80px;
     font-family: "Electrolize", sans-serif;
-    font-size: 30px;
+    font-size: 25px;
     border-radius: 20px;
 
     /* Add box-sizing to include padding in total width/height */
@@ -44,18 +70,20 @@ p {
     overflow-x: hidden;
 }
 
-/* Background image (z-index: 1) */
 .background {
+    z-index: 2;
+}
+
+.subject {
+    z-index: 4;
+}
+
+.landscape {
     z-index: 1;
 }
 
-/* Subject image (z-index: 3) */
-.subject {
-    z-index: 3;
-}
-
 .cole {
-    float: right; /* Add this line */
+    float: right; 
     margin-left: 20px;
     margin-right: 30px;
     margin-bottom: 20px; 
@@ -70,11 +98,11 @@ p {
 @keyframes fadeInFromBelow {
     0% {
         opacity: 0;
-        transform: translateY(20px); /* Start 20px below */
+        transform: translateY(20px); 
     }
     100% {
         opacity: 1;
-        transform: translateY(0); /* End at the normal position */
+        transform: translateY(0);
     }
 }
 
@@ -122,7 +150,7 @@ p {
     white-space: pre;
     color: white; 
     /* text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7); */
-    z-index: 2;
+    z-index: 3;
     padding-top: 10px; 
 
     animation: fadeInFromBelow 1s ease-out, glitchEffect 0.10s 1s; 
@@ -174,7 +202,6 @@ p {
 * {
     scrollbar-width: none;
 }
-
 
 
 

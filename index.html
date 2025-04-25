@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,30 +9,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bruno+Ace&family=Bruno+Ace+SC&family=Cinzel:wght@400..900&family=Dynalight&family=Electrolize&family=Luxurious+Roman&family=Michroma&family=Orbit&family=Orbitron:wght@400..900&family=Play:wght@400;700&family=Rouge+Script&family=Shrikhand&family=Syncopate:wght@400;700&family=Whisper&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="sty.css">
 </head>
-<body>
+<body class="default">
     <div class="gallery background">
+        <img src="sailorPerfectGIT.jpg" alt="Background Image">
+        <img src="DurkandEm.jpg" alt="Background Image">
+        <img src="sailorAngelBackground.png" alt="Background Image">
+        <img src="STORM/StormPower.jpg" alt="Background Image">
+        <img src="SAILOR/SoftSailor.jpg" alt="Background Image">
         <img src="backgroundMotherTEST.png" alt="Background Image">
-        <img src="siblingsEatingBackground.png" alt="Background Image">
-        <img src="bluesBrothersBackground.png" alt="Background Image">
-        <img src="siblingsSittingBackground.png" alt="Background Image">
+        <img src="STORM/StormLakeALT.jpg" alt="Background Image">
+        <img src="Saily.jpg" alt="Background Image">
+        <img src="SAILOR/SoftSailorForward.jpg" alt="Background Image">
+        <img src="siblingsEating.jpg" alt="Background Image">
+        <img src="BluesBrothers.jpg" alt="Background Image">
+        <img src="siblingsSlayingR.jpg" alt="Background Image">
     </div>
 
     <p> 
-        <img src="meHead.jpg" alt="Description of the image" class="cole">
-        Lorem ipsum dolor sit amet, id veniam mucius noluisse sea. Et malorum nusquam eligendi eum, cum cu feugiat repudiandae. Bonorum voluptatibus et eum, vix voluptatum intellegebat eu. Nec te eripuit graecis lucilius, menandri erroribus an qui.
+        <!-- <img src="meHead.jpg" alt="Description of the image" class="cole"> -->
+        <img src="me (colorized).jpg" alt="Description of the image" class="cole">
 
-        Dictas quaestio eu pri, vim ut mollis commodo, qui ad saepe labore timeam. Mel primis utamur ex, usu regione minimum pericula no. Cu has movet veritus apeirian, elit verear philosophia quo ut. Pri maiorum corpora placerat et. Te sea gubergren assueverit, no per iusto delenit reprimique, partem legendos te eum. In nam abhorreant temporibus liberavisse.
-        
-        An usu quem fierent molestie. Enim qualisque ad mel. Pro duis feugait at, cum an affert quando tractatos. Cum ludus detracto interpretaris ex. Usu ex civibus propriae.
-        
-        Utroque appetere ex vix. Has tota nostrum pericula eu. An aeterno oblique dolorum per. Utinam tacimates elaboraret vis an, usu assum minimum expetenda cu.
-        
-        Est graeco delectus at. In nulla tantas verear mel, nec ea volumus consectetuer, mel te tation deleniti. Et sed quodsi deterruisset, vim in decore argumentum, an ridens voluptua eum. Veritus molestie invidunt mel id, ea munere philosophia est. Mea aeque latine ea. 
+        My name is COLE RASMUSSEN, I'm a 23 photographer from North Carolina. I do all kinds of PHOTOGRAPHY, from graduation, weddings, and other
+        ceremonies. I'm just starting out, but I have a lot of passion for photography. Please reach out if you're in the Raleigh-Durham area and
+        you want some photos, I'm open to any and all ideas.
         
     </p>
 
     <div class="gallery subject">
-        <img src="subjectMotherTEST.png" alt="Subject Image">
+        <img src="SailorPerfectSubject.png" alt="Subject Image">
+        <img src="DurkandEmSubject.png" alt="Subject Image">
+        <img src="sailorAngelSubject.png" alt="Subject Image">
+        <img src="STORM/StormPowerSubject.png" alt="Subject Image">
+        <img src="SAILOR/SoftSailorSubject.png" alt="Subject Image">
+        <img id="subjectMotherTEST" src="subjectMotherTEST.png" alt="Subject Image">
+        <img src="STORM/StormLakeALTSubject.png" alt="Subject Image">
+        <img src="SailySubject.png" alt="Subject Image">
+        <img src="SAILOR/SoftSailorForwardSubject.png" alt="Subject Image">
         <img src="siblingsEatingSubject.png" alt="Subject Image">
         <img src="bluesBrothersSubject.png" alt="Subject Image">
         <img src="siblingsSittingSubject.png" alt="Subject Image">
@@ -41,6 +52,63 @@
 
     <!-- <button class="top-left-button">Click Me</button> -->
     <div class="text-overlay">COLE RASMUSSEN PHOTOGRAPHY</div>
-    <div class="subtitle">COLE RASMUSSEN PHOTOGRAPHY</div>    
+    <div class="subtitle">COLE RASMUSSEN PHOTOGRAPHY</div> 
+
+    <div class="galleryLandscape landscape" id="landscapePhotos">
+        <img src="cousins.jpg" alt="Background Image">
+        <img src="STORM/StormBench.jpg" alt="Background Image">
+        <img src="Fam.jpg" alt="Background Image">
+        <img src="BlowingDetail.jpg" alt="Background Image">
+        <img src="SiblingsLeaning.jpg" alt="Background Image">
+        <img src="hardness.jpg" alt="Background Image">
+    </div>
+    
+    <!-- <script type="text/javascript">
+        const body = document.body;
+
+        const intersectionObserver = new IntersectionObserver(
+            (e) => {
+                if (e[0].intersectionRatio > 0 && document.body.className === "default")
+                    document.body.classList = "alt";
+            }
+        ).observe(document.getElementById("subjectMotherTEST"));
+
+        intersectionObserver.observe(subjectMotherTEST);
+    </script> -->
+
+    <script>
+        const container = document.getElementById('landscapePhotos');
+    
+        container.addEventListener('wheel', function(event) {
+        event.preventDefault(); // Stop the vertical scroll
+        container.scrollLeft += event.deltaY; // Scroll horizontally instead
+        });
+    </script>
+
+    <script>
+        function isMobile() {
+            return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        }
+
+        if (isMobile()) {
+            // Hide everything by default
+            document.body.innerHTML = '';
+
+            // Create a minimal mobile version
+            const galleryBackground = document.querySelector('.gallery.background');
+            const gallerySubject = document.querySelector('.gallery.subject');
+            const textOverlay = document.querySelector('.text-overlay');
+            const subtitle = document.querySelector('.subtitle');
+
+            // Create a new body content
+            const mobileBody = document.createElement('div');
+
+            [galleryBackground, gallerySubject, textOverlay, subtitle].forEach(el => {
+                if (el) mobileBody.appendChild(el.cloneNode(true));
+            });
+
+            document.body.appendChild(mobileBody);
+        }
+    </script>
 </body>
 </html>
