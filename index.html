@@ -93,11 +93,34 @@
                     (el.classList.contains('gallery') && (el.classList.contains('background') || el.classList.contains('subject'))) ||
                     el.classList.contains('text-overlay') ||
                     el.classList.contains('subtitle');
-    
+
                 if (!keep) {
                     el.style.display = 'none';
                 }
             });
+
+            // Inject mobile-specific styles
+            const style = document.createElement('style');
+            style.innerHTML = `
+                .text-overlay, .subtitle {
+                    font-size: 6vw;
+                    text-align: center;
+                    margin: 10px 0;
+                }
+
+                .gallery img {
+                    width: 100vw;
+                    height: auto;
+                    display: block;
+                }
+
+                body {
+                    margin: 0;
+                    padding: 0;
+                    background-color: black; /* optional */
+                }
+            `;
+            document.head.appendChild(style);
         }
     </script>
 </body>
