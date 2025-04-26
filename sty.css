@@ -203,6 +203,10 @@ p {
     scrollbar-width: none;
 }
 
+img[src*="DurkandEmSubject.png"] {
+    transform: scaleX(1) !important;
+}
+
 
 
 
